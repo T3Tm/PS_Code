@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#define ll long long
 typedef struct newtype{
     int v;//자료형 새로 추가하면 된다.
 }newtype;
@@ -12,7 +12,7 @@ typedef struct node{
 typedef struct queue{//front,pop,size,empty,push
     node* front;//처음에 연결
     node* back;//마지막에 바로 연결
-    long long size;
+    ll size;
 }queue;
 
 void init(queue* q){
@@ -50,7 +50,7 @@ void pop(queue * q){//젤 앞에 값 빼기
     q->size--;//사이즈 하나 줄여주기
 }
 
-long long size(queue * q){//사이즈 확인
+ll size(queue * q){//사이즈 확인
     return q->size;
 }
 
